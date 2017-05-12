@@ -12,35 +12,50 @@
             margin: 0px;
             float: right;
             padding: 0;
+            padding-top: 50px;
+            
             .li{
                 float: left;
-               padding: 50px 10px 10px 10px;
                color: white;
                position: relative;
-               text-align: center;
+               margin-right: 20px;
                a{
-                   float: left;
-               }
-               img{
-                   float: left;
-                   cursor: pointer;
-                   margin-left: 5px;
-                   margin-top: -5px;
+                  
+                  display: block;
+                  padding-bottom: 30px;
+                  h3{
+                      margin: 0px;
+                      float: left;
+                      font-size: 16px;
+                  }
+                  span{
+                      display: block;
+                      float: left;
+                      margin-top: -3px;
+                      margin-left: 3px;
+                  }
                }
                ul{
                    list-style: none;
-                   background: palevioletred;
                    position: absolute;
                    z-index: 555;
                    padding: 0px;
                    width: 136px;
-                   top: 80px;
+                   top: 30px;
                    left: -30px;
+                   background:#312145;
                    li{
-                       width: 100%;
-                       background:#312145;
-                       padding: 20px 0px;
+                       padding:10px 10px;
                        cursor: pointer;
+                       &:hover{
+                           padding-left: 20px;
+                           background-color: #3498db;
+                           transition: padding-left 0.5s;
+                       }
+                       &:hover:after{
+                           content: url(../../dist/images/nav_li_bg.png);
+                           float: right;
+                       }
                    }
                }
             }
@@ -59,20 +74,27 @@ a,a:active,a:link{
 .clear{
     clear: both;
 }
-@keyframes name {
-  25%{
-    transform: translateX(0px);
-  }
-  50%{
-    transform: translateX(20px);
-  }
-  75%{
-    transform: translateX(10px);
-  }
-  100%{
-    transform: translateX(0px);
-  }
-}
+@keyframes name{
+                50%{
+                    transform:scaleY(1);
+                }
+                55%{
+                    transform:scaleY(1.25);
+                }
+                60%{
+                    transform:scaleY(0.8);
+                }
+                65%{
+                    transform:scaleY(1.1);
+                }
+                70%{
+                    transform:scaleY(0.9);
+                }
+                100%{
+                    transform:scaleY(1);
+                }
+                
+            }
 
 
 
