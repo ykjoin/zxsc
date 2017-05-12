@@ -18,6 +18,6 @@ gulp.task('Server',['less'],function(){
 	gulp.watch("src/less/*.less",['less']);
 	gulp.watch("src/js/*.js",['less']);
 	gulp.watch("dist/css/*.css").on('change',bs.reload);
-	gulp.watch("*.htnl").on("change",bs.reload);
+	gulp.watch("*.html").on("change",bs.reload);
 });
 gulp.task('default',['Server']);
