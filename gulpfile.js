@@ -12,7 +12,7 @@ gulp.task('Server',['less'],function(){
 	bs.init({
 		server:{
 			baseDir:"./",
-			index:"index.html"
+			index:"Article.html"
 		}
 	});
 	gulp.watch("src/less/*.less",['less']);
@@ -21,3 +21,7 @@ gulp.task('Server',['less'],function(){
 	gulp.watch("*.html").on("change",bs.reload);
 });
 gulp.task('default',['Server']);
+
+
+
+
