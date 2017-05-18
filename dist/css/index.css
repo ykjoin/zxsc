@@ -11,38 +11,51 @@
   margin: 0px;
   float: right;
   padding: 0;
+  padding-top: 50px;
 }
 .header .pulick .nav .ul .li {
   float: left;
-  padding: 50px 10px 10px 10px;
   color: white;
   position: relative;
-  text-align: center;
+  margin-right: 20px;
 }
 .header .pulick .nav .ul .li a {
-  float: left;
+  display: block;
+  padding-bottom: 30px;
 }
-.header .pulick .nav .ul .li img {
+.header .pulick .nav .ul .li a h3 {
+  margin: 0px;
   float: left;
-  cursor: pointer;
-  margin-left: 5px;
-  margin-top: -5px;
+  font-size: 16px;
+}
+.header .pulick .nav .ul .li a span {
+  display: block;
+  float: left;
+  margin-top: -3px;
+  margin-left: 3px;
 }
 .header .pulick .nav .ul .li ul {
   list-style: none;
-  background: palevioletred;
   position: absolute;
   z-index: 555;
   padding: 0px;
   width: 136px;
-  top: 80px;
+  top: 30px;
   left: -30px;
+  background: #312145;
 }
 .header .pulick .nav .ul .li ul li {
-  width: 100%;
-  background: #312145;
-  padding: 20px 0px;
+  padding: 10px 10px;
   cursor: pointer;
+}
+.header .pulick .nav .ul .li ul li:hover {
+  padding-left: 20px;
+  background-color: #3498db;
+  transition: padding-left 0.5s;
+}
+.header .pulick .nav .ul .li ul li:hover:after {
+  content: url(../../dist/images/nav_li_bg.png);
+  float: right;
 }
 .pulick {
   width: 1100px;
@@ -58,17 +71,23 @@ a:link {
   clear: both;
 }
 @keyframes name {
-  25% {
-    transform: translateX(0px);
-  }
   50% {
-    transform: translateX(20px);
+    transform: scaleY(1);
   }
-  75% {
-    transform: translateX(10px);
+  55% {
+    transform: scaleY(1.25);
+  }
+  60% {
+    transform: scaleY(0.8);
+  }
+  65% {
+    transform: scaleY(1.1);
+  }
+  70% {
+    transform: scaleY(0.9);
   }
   100% {
-    transform: translateX(0px);
+    transform: scaleY(1);
   }
 }
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -462,18 +481,89 @@ template {
 [hidden] {
   display: none;
 }
+.footer {
+  background: url(../images/yinyue_bg.jpg);
+  height: 348px;
+}
+.footer .pulick .music {
+  padding: 116px 0 0 276px;
+}
+.footer .pulick .music span {
+  display: block;
+  width: 57px;
+  height: 57px;
+  float: left;
+  margin-right: 26px;
+}
+.footer .pulick .music span.duo {
+  background: url(../images/yinyue_duo.png) no-repeat;
+}
+.footer .pulick .music span.lai {
+  background: url(../images/yinyue_lai.png) no-repeat;
+}
+.footer .pulick .music span.mi {
+  background: url(../images/yinyue_mi.png) no-repeat;
+}
+.footer .pulick .music span.fa {
+  background: url(../images/yinyue_fa.png) no-repeat;
+}
+.footer .pulick .music span.suo {
+  background: url(../images/yinyue_suo.png) no-repeat;
+}
+.footer .pulick .music span.la {
+  background: url(../images/yinyue_la.png) no-repeat;
+}
+.footer .pulick .music span.xi {
+  background: url(../images/yinyue_xi.png) no-repeat;
+}
+.footer .pulick .music span:hover {
+  background-position: 0 -57px;
+  animation: name 0.3s;
+  cursor: pointer;
+}
+.footer .pulick .shenmin {
+  border-top: 2px #9890a2 dashed;
+  text-align: center;
+  line-height: 65px;
+  margin-top: 79px;
+  color: #fff;
+  cursor: pointer;
+  font-family: '宋体';
+}
+.footer .pulick .shenmin:hover {
+  color: #6CF;
+}
+@keyframes name {
+  30% {
+    transform: scaleY(1.1) scaleX(0.8);
+  }
+  80% {
+    transform: scaleX(1.15) scaleY(0.8);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
 .banner {
   width: 100%;
+  min-width: 1200px;
+  min-height: 416px;
+}
+.banner .pulick {
   position: relative;
+  top: 0px;
+  height: 416px;
+  margin-top: -416px;
 }
 .banner .banner-img {
   width: 100%;
+  height: 416px;
   display: block;
 }
 .banner .study {
   position: absolute;
   left: 0px;
-  top: 155px;
+  top: 140px;
 }
 .banner .study1 {
   position: absolute;
@@ -482,7 +572,7 @@ template {
 }
 .banner .study2 {
   position: absolute;
-  left: 500px;
+  left: 360px;
   bottom: 0px;
 }
 .banner .stydy3 {
@@ -493,11 +583,11 @@ template {
 .banner .stydy4 {
   position: absolute;
   right: 0px;
-  bottom: 40px;
+  bottom: 13px;
 }
 .banner .stydy5 {
   position: absolute;
-  left: 420px;
+  left: 260px;
   bottom: 290px;
 }
 .banner .button {
@@ -535,7 +625,74 @@ template {
 }
 .conter {
   width: 100%;
+  min-height: 849px;
   background: #f1f2f6;
+}
+.conter .pulick {
+  position: relative;
+  min-height: 849px;
+}
+.conter .pulick .y {
+  width: 1100px;
+  height: 540px;
+  position: relative;
+  overflow: hidden;
+}
+.conter .pulick .pieces {
+  width: 19px;
+  height: 380px;
+  position: absolute;
+  background: url(../images/chanpin_nowline_bgline.png) repeat-y 9px 20px;
+  top: 360px;
+  left: 0px;
+}
+.conter .pulick .pieces .one {
+  width: 19px;
+  height: 19px;
+  margin-bottom: 55px;
+}
+.conter .pulick .pieces .one span {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.conter .pulick .pieces .one .span1 {
+  background: url(../images/chanpin_nowline.png);
+  height: 19px;
+  position: relative;
+  top: -4px;
+}
+.conter .pulick .pieces .one .span2 {
+  background: url(../images/chanpin_nowline_xiaoquan.png);
+  height: 11px;
+  width: 11px;
+  position: relative;
+  top: 0px;
+  transform: rotate(180deg);
+}
+.conter .pulick .pieces .one .span2:hover {
+  background-position-y: -11px;
+  transition: background-position 0.5s;
+}
+.conter .pulick .pieces .f {
+  margin-bottom: 0px;
+}
+.conter .pulick .left-right {
+  position: absolute;
+  z-index: 9999;
+  width: 613px;
+  margin-left: -97px;
+  top: 64%;
+  left: 53%;
+  background: url(../images/next&prev_line.png) repeat-x left center;
+}
+.conter .pulick .left-right .img-right {
+  float: right;
+  cursor: pointer;
+}
+.conter .pulick .left-right .img-left {
+  float: left;
+  cursor: pointer;
 }
 .conter .conter-img {
   width: 58px;
@@ -549,93 +706,196 @@ template {
 .conter h1,
 .conter .p {
   text-align: center;
-  font-size: 35px;
-  color: #060038;
+  font-size: 60px;
+  color: #311759;
   margin: 0px;
+  font-family: '宋体';
 }
 .conter .p {
   font-size: 20px;
 }
 .conter .chek {
-  width: 90px;
+  width: 37px;
+  height: 8px;
   margin: 0 auto;
+  padding-bottom: 70px;
 }
-.conter .div-right {
+.conter .disploy-one {
+  min-height: 540px;
+  min-width: 1100px;
+  position: absolute;
+}
+.conter .disploy-one .div-right {
+  width: 613px;
+  position: absolute;
+  right: 0px;
+}
+.conter .disploy-one .div-right .trr .pen {
   float: right;
-  width: 50%;
-  padding: 70px 0px;
 }
-.conter .div-right .pen {
-  float: right;
-}
-.conter .div-right hr {
+.conter .disploy-one .div-right .trr hr {
   height: 2px;
   background: #4b436a;
   margin: 0px;
   margin-top: 15px ;
 }
-.conter .div-right h1 {
+.conter .disploy-one .div-right .trr h1 {
   margin: 0px;
   font-size: 30px;
   color: #4b436a;
   text-align: left;
 }
-.conter .div-right .brr {
-  padding-top: 50px;
+.conter .disploy-one .div-right .trr1 .pen {
+  float: right;
 }
-.conter .div-right .brr img {
+.conter .disploy-one .div-right .trr1 hr {
+  height: 2px;
+  background: #4b436a;
+  margin: 0px;
+  margin-top: 15px ;
+}
+.conter .disploy-one .div-right .trr1 h1 {
+  margin: 0px;
+  font-size: 30px;
+  color: #4b436a;
+  text-align: left;
+}
+.conter .disploy-one .div-right .brr {
+  padding: 50px 0px 50px 10px;
+}
+.conter .disploy-one .div-right .brr img {
   float: left;
 }
-.conter .div-right .brr h3 {
-  color: #4b436a;
+.conter .disploy-one .div-right .brr h3 {
+  color: #565559;
   margin: 0px;
+  font-size: 24px;
+  font-family: 'kaiti';
   margin-left: 120px;
 }
-.conter .div-right .brr p {
+.conter .disploy-one .div-right .brr p {
   float: right;
   margin: 0px;
   margin-left: 120px;
-  margin-top: -45px;
-  color: #4b436a;
+  margin-top: -70px;
+  font-size: 15px;
+  font-family: '宋体';
+  line-height: 24px;
+  color: #565559;
 }
-.conter .div-right .left-right {
-  padding: 40px 0px;
+.conter .disploy-one .div-right .brr1 {
+  padding: 30px 0px 50px 10px;
 }
-.conter .div-right .left-right .img-right {
-  float: right;
-}
-.conter .div-right .left-right .img-left {
+.conter .disploy-one .div-right .brr1 img {
   float: left;
 }
-.conter .div-right .left-right .div {
-  width: 100%;
-  height: 0px;
-  border-top: 2px dotted darkgray;
-  margin-top: -18px;
-}
-.conter .div-right p {
+.conter .disploy-one .div-right .brr1 h3 {
+  color: #565559;
   margin: 0px;
-  color: #4b436a;
+  font-size: 24px;
+  font-family: 'kaiti';
+  margin-left: 120px;
 }
-.conter .div-right .left-img {
+.conter .disploy-one .div-right .brr1 p {
+  text-transform: capitalize;
+  margin: 0px;
+  font-size: 15px;
+  font-family: '宋体';
+  line-height: 24px;
+  color: #565559;
+}
+.conter .disploy-one .div-right .brr1 p span {
+  font-size: 30px;
+}
+.conter .disploy-one .div-right .ppp {
+  padding-top: 30px;
+}
+.conter .disploy-one .div-right .ppp p {
+  margin: 0px;
+  font-size: 15px;
+  font-family: '宋体';
+  line-height: 24px;
+  color: #565559;
+}
+.conter .disploy-one .div-right .ppp1 {
+  padding-top: 30px;
+}
+.conter .disploy-one .div-right .ppp1 p {
+  margin: 0px;
+  font-size: 15px;
+  font-family: '宋体';
+  line-height: 24px;
+  color: #565559;
+}
+.conter .disploy-one .div-right .ppp2 {
+  padding-top: 30px;
+}
+.conter .disploy-one .div-right .ppp2 p {
+  margin: 0px;
+  font-size: 15px;
+  font-family: '宋体';
+  line-height: 24px;
+  color: #565559;
+}
+.conter .disploy-one .div-right .ppp2 .p2 {
+  margin-top: 120px;
+}
+.conter .disploy-one .div-right .ppp3 {
+  padding-top: 30px;
+}
+.conter .disploy-one .div-right .ppp3 p {
+  margin: 0px;
+  font-size: 15px;
+  font-family: '宋体';
+  line-height: 24px;
+  color: #565559;
+}
+.conter .disploy-one .div-right .ppp3 .pen3 {
+  margin-bottom: 120px;
+}
+.conter .disploy-one .div-right .ppp4 {
+  padding-top: 30px;
+}
+.conter .disploy-one .div-right .ppp4 p {
+  margin: 0px;
+  font-size: 15px;
+  font-family: '宋体';
+  line-height: 24px;
+  color: #565559;
+}
+.conter .disploy-one .div-right .ppp4 .p3 {
+  margin-top: 120px;
+}
+.conter .disploy-one .div-right .family {
+  width: 208px;
+  font-size: 18px;
+  float: right;
+  margin: 50px 10px 0px 0px;
+}
+.conter .disploy-one .div-right .family .bottom {
+  margin-top: 10px;
   float: right;
 }
-.conter .div-left {
-  width: 50%;
+.conter .disploy-one .div-right .family .dtop {
   float: left;
-  padding: 70px 0px;
+  margin-top: -10px;
 }
-.conter .div-left .div-img {
+.conter .disploy-one .div-left {
+  position: absolute;
   width: 370px;
   height: 436px;
-  margin: 0 auto;
+  padding-left: 60px;
+  left: 0px;
 }
 .about {
   width: 100%;
   position: relative;
+  background: #f1f2f6;
 }
 .about .background {
   width: 100%;
+  height: 1140px;
+  display: block;
 }
 .about .pulick {
   position: absolute;
@@ -643,85 +903,925 @@ template {
   margin-left: -550px;
   top: 0px;
 }
-.about .pulick h1,
-.about .pulick .p {
+.about .pulick .conter-top h1,
+.about .pulick .conter-top .p {
   text-align: center;
-  font-size: 35px;
+  font-size: 54px;
   color: white;
   margin: 0px;
-  padding-top: 40px;
+  padding-top: 100px;
+  font-family: '楷体';
 }
-.about .pulick .p {
-  font-size: 20px;
+.about .pulick .conter-top .p {
+  font-size: 18px;
   margin: 0px;
   padding-top: 0px;
 }
-.about .pulick .chek {
-  width: 90px;
+.about .pulick .conter-top .chek {
+  width: 37px;
   margin: 0 auto;
 }
-.about .pulick .div-right {
-  float: right;
-  width: 50%;
-  padding: 30px 0px;
+.about .pulick .center {
+  padding-top: 105px;
+  font-family: '宋体';
 }
-.about .pulick .div-right .pen {
-  float: right;
-}
-.about .pulick .div-right hr {
-  height: 2px;
-  background: #4b436a;
+.about .pulick .center .size-top {
+  height: 48px;
+  width: 100%;
+  list-style: none;
+  padding: 0px;
   margin: 0px;
-  margin-top: 15px ;
 }
-.about .pulick .div-right h1 {
+.about .pulick .center .size-top li {
+  font-size: 18px;
+  color: #b09dc9;
+  float: left;
+  width: 16.666666667%;
+  text-align: center;
+  line-height: 48px;
+}
+.about .pulick .center .size-top li.size-topa {
+  line-height: 30px;
+  color: white;
+}
+.about .pulick .center .line {
+  height: 42px;
+  background: url(../images/strip.png) no-repeat center;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.about .pulick .center .line li {
+  width: 42px;
+  height: 42px;
+  background: red;
+  float: left;
+  margin-left: 140px;
+  background: url(../images/Small.png) no-repeat;
+  background-position: 15px 15px;
+}
+.about .pulick .center .line li:first-child {
+  margin-left: 70px;
+}
+.about .pulick .center .line li.linea {
+  background: url(../images/TARGET.png) no-repeat;
+  background-position: 0px 0px;
+}
+.about .pulick .center .size-bom {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  height: 48px;
+}
+.about .pulick .center .size-bom li {
+  font-size: 18px;
+  color: #b09dc9;
+  float: left;
+  width: 16.666666667%;
+  text-align: center;
+  margin-top: 10px;
+}
+.about .pulick .center .size-bom li p {
+  margin: 0px;
+}
+.about .pulick .center .size-bom li.size-boma {
+  margin-top: 30px;
+  color: white;
+}
+.about .pulick .center .move {
+  width: 100%;
+  height: 45px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+}
+.about .pulick .center .move .cript {
+  width: 61px;
+  height: 45px;
+  position: absolute;
+  left: 60px;
+}
+.about .pulick .center .move .cript img {
+  width: 100%;
+}
+.about .pulick .about-bottom {
+  position: relative;
+  height: 461px;
+}
+.about .pulick .about-bottom .hre {
+  position: relative;
+  height: 461px;
+  overflow: hidden;
+}
+.about .pulick .about-bottom .hre .one {
+  width: 1100px;
+  height: 461px;
+}
+.about .pulick .about-bottom .hre .one .div-right {
+  float: right;
+  width: 600px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.about .pulick .about-bottom .hre .one .div-right .trr {
+  height: 54px;
+  background: url(../images/pen_line.png) no-repeat left bottom;
+}
+.about .pulick .about-bottom .hre .one .div-right .trr img {
+  float: right;
+  margin-top: 1px;
+}
+.about .pulick .about-bottom .hre .one .div-right .trr h1 {
   margin: 0px;
   font-size: 30px;
+  font-family: '宋体';
   color: white;
-  text-align: left;
-  padding-top: 0px;
 }
-.about .pulick .div-right .brr {
-  padding-top: 50px;
+.about .pulick .about-bottom .hre .one .div-right .brr {
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
-.about .pulick .div-right .brr img {
+.about .pulick .about-bottom .hre .one .div-right .brr img {
   float: left;
+  margin-top: -25px;
 }
-.about .pulick .div-right .brr h3 {
-  color: white;
+.about .pulick .about-bottom .hre .one .div-right .brr h3 {
   margin: 0px;
-  margin-left: 120px;
-}
-.about .pulick .div-right .brr p {
+  width: 475px;
   float: right;
-  margin: 0px;
-  margin-left: 120px;
-  margin-top: -45px;
+  font-size: 24px;
+  font-family: '宋体';
   color: white;
+  padding-bottom: 17px;
 }
-.about .pulick .div-right .left-right {
-  padding: 40px 0px;
-}
-.about .pulick .div-right .left-right .div {
-  width: 100%;
-  height: 0px;
-  border-top: 2px dotted darkgray;
-  margin-top: -18px;
-}
-.about .pulick .div-right p {
+.about .pulick .about-bottom .hre .one .div-right .brr p {
   margin: 0px;
-  color: white;
-}
-.about .pulick .div-right .left-img {
+  width: 475px;
   float: right;
+  font-family: '宋体';
+  font-size: 14px;
+  color: #9f8eb8;
+  line-height: 24px;
 }
-.about .pulick .div-left {
-  width: 50%;
+.about .pulick .about-bottom .hre .one .div-right .ppp p {
+  font-family: '宋体';
+  font-size: 14px;
+  color: #9f8eb8;
+  line-height: 24px;
+}
+.about .pulick .about-bottom .hre .one .div-right .family {
+  width: 194px;
+  float: right;
+  padding-top: 30px;
+}
+.about .pulick .about-bottom .hre .one .div-right .family .bottom {
+  float: right;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+.about .pulick .about-bottom .hre .one .div-right .family .dtop {
   float: left;
-  padding: 30px 0px;
+  margin-top: -15px;
+  margin-right: 5px;
 }
-.about .pulick .div-left .div-img {
+.about .pulick .about-bottom .hre .one .div-left {
+  float: left;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-left: 70px;
   width: 370px;
-  height: 436px;
+}
+.about .pulick .about-bottom .about-img {
+  position: absolute;
+  z-index: 9999;
+  width: 600px;
+  margin-left: -90px;
+  top: 50%;
+  left: 53%;
+  background: url(../images/next&prev_line.png) repeat-x left center;
+}
+.about .pulick .about-bottom .about-img .img-right {
+  float: right;
+  margin-right: -5px;
+  cursor: pointer;
+}
+.about .pulick .about-bottom .about-img .img-left {
+  float: left;
+  cursor: pointer;
+  margin-left: -5px;
+}
+.about .pulick .about-bottom .pieces {
+  width: 19px;
+  height: 380px;
+  position: absolute;
+  background: url(../images/chanpin_nowline_bgline.png) repeat-y 9px 20px;
+  top: 30px;
+  left: 0px;
+}
+.about .pulick .about-bottom .pieces .one {
+  width: 19px;
+  height: 19px;
+  margin-bottom: 55px;
+}
+.about .pulick .about-bottom .pieces .one span {
+  display: block;
   margin: 0 auto;
+  cursor: pointer;
+}
+.about .pulick .about-bottom .pieces .one .span1 {
+  background: url(../images/chanpin_nowline.png);
+  height: 19px;
+  position: relative;
+  top: -4px;
+}
+.about .pulick .about-bottom .pieces .one .span2 {
+  background: url(../images/chanpin_nowline_xiaoquan.png);
+  height: 11px;
+  width: 11px;
+  position: relative;
+  top: 0px;
+  transform: rotate(180deg);
+}
+.about .pulick .about-bottom .pieces .one .span2:hover {
+  background-position-y: -11px;
+  transition: background-position 0.5s;
+}
+.about .pulick .about-bottom .pieces .f {
+  margin-bottom: 0px;
+}
+.business {
+  background: #f1f2f6;
+}
+.business .businessTop {
+  text-align: center;
+  padding-bottom: 70px;
+}
+.business .businessTop h1,
+.business .businessTop p {
+  margin: 0px;
+  font-size: 15px;
+}
+.business .businessTop h1 {
+  font-size: 60px;
+  font-family: '宋体';
+}
+.business .businessTop p {
+  letter-spacing: 6px;
+}
+.business .businessBom .Nonoe {
+  border-bottom: 2px dashed #e0e0e2;
+  margin-bottom: 54px;
+}
+.business .businessBom .Nonoe.y {
+  margin-bottom: 0px;
+}
+.business .businessBom .Nonoe .NonoeImg {
+  padding-bottom: 66px;
+}
+.business .businessBom .Nonoe .NonoeImg p {
+  font-size: 15px;
+}
+.business .businessBom .Nonoe .NonoeImg .imgone {
+  width: 148px;
+  font-size: 90px;
+  color: #b5b6ba;
+  font-family: "宋体";
+  float: left;
+}
+.business .businessBom .Nonoe .NonoeImg .contenta {
+  width: 285px;
+  text-align: right;
+  padding-top: 31px;
+  float: left;
+}
+.business .businessBom .Nonoe .NonoeImg .contenta h1 {
+  color: #311859;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0px;
+}
+.business .businessBom .Nonoe .NonoeImg .contenta p {
+  margin: 0px;
+}
+.business .businessBom .Nonoe .NonoeImg .imgtherr {
+  width: 116px;
+  margin: 0 44px 0 59px;
+  cursor: pointer;
+  float: left;
+}
+.business .businessBom .Nonoe .NonoeImg .imgtherr img {
+  width: 100%;
+}
+.business .businessBom .Nonoe .NonoeImg .imgtherr:hover {
+  animation: yong 1.5s linear;
+}
+.business .businessBom .Nonoe .NonoeImg .contentb {
+  margin: 20px 60px 0 0;
+  font-family: KaiTi_GB2312;
+  float: left;
+  line-height: 24px;
+}
+.business .businessBom .Nonoe .NonoeImg .contentb p {
+  margin: 0px;
+  width: 320px;
+  color: #565559;
+}
+.business .businessBom .Nonoe .NonoeImg .falss {
+  height: 67px;
+  width: 67px;
+  float: left;
+  background: url(../images/business_zhankaishouqi.png);
+  cursor: pointer;
+  margin-top: 22px;
+}
+.business .businessBom .Nonoe .NonoeImg .falss:hover {
+  animation: yong 1.5s linear;
+}
+.business .businessBom .Nonoe .contents {
+  padding-bottom: 30px;
+  width: 790px;
+  margin: 0 auto;
+  font-family: KaiTi_GB2312;
+  line-height: 24px;
+}
+.business .businessBom .Nonoe .contents p {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #565559;
+}
+.top {
+  width: 87px;
+  height: 161px;
+  position: fixed;
+  bottom: 160px;
+  right: 40px;
+  display: none;
+  z-index: 666;
+}
+.top .topt {
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  margin-bottom: 15px;
+  background: url(../images/scroll_top_bg.png);
+}
+.top .topt:hover {
+  background-position-y: -50px;
+  transition: background-position-y 0.3s;
+}
+.top .bottom {
+  width: 87px;
+  height: 87px;
+  position: absolute;
+  right: 0;
+  top: 74px;
+  background: url(../images/fixed_contactus.png) top right no-repeat;
+  cursor: pointer;
+}
+.top .bottom:hover {
+  animation: name 0.3s;
+  width: 235px;
+  transition: width 0.6s;
+}
+.team {
+  width: 100%;
+  background: #f1f2f6;
+  padding-top: 54px;
+}
+.team .pulick {
+  padding-bottom: 70px;
+}
+.team .pulick .businessTop {
+  text-align: center;
+}
+.team .pulick .businessTop h1,
+.team .pulick .businessTop p {
+  margin: 0px;
+  font-size: 15px;
+}
+.team .pulick .businessTop h1 {
+  font-size: 60px;
+  font-family: '宋体';
+  color: #311759;
+}
+.team .pulick .businessTop p {
+  letter-spacing: 6px;
+  color: #311759;
+}
+.team .pulick .Personnel {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 70px;
+  position: relative;
+  height: 330px;
+}
+.team .pulick .Personnel .btn {
+  height: 29px;
+  width: 216px;
+  margin: 0px auto;
+  margin-top: 80px;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  margin-left: -108px;
+}
+.team .pulick .Personnel .btn .next {
+  float: right;
+}
+.team .pulick .Personnel .btn .prev {
+  float: left;
+}
+.team .pulick .Personnel .btn .cirr {
+  width: 36px;
+  margin: 0 auto;
+}
+.team .pulick .Personnel .war {
+  width: 300%;
+  position: absolute;
+  left: 0px;
+  top: 100px;
+}
+.team .pulick .Personnel .war .one {
+  width: 1100px;
+  height: 200px;
+  float: left;
+}
+.team .pulick .Personnel .war .one .Persleft {
+  float: left;
+}
+.team .pulick .Personnel .war .one .Persright {
+  width: 530px;
+  height: 200px;
+  border: 1px solid #e0e1e5;
+  float: right;
+}
+.team .pulick .Personnel .war .one .Persright .img {
+  float: left;
+  width: 200px;
+  text-align: center;
+}
+.team .pulick .Personnel .war .one .Persright .img img {
+  margin-top: -60px;
+}
+.team .pulick .Personnel .war .one .Persright .img h3,
+.team .pulick .Personnel .war .one .Persright .img p {
+  margin: 0px;
+  color: #5f4c82;
+}
+.team .pulick .Personnel .war .one .Persright .img h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  font-family: '宋体';
+}
+.team .pulick .Personnel .war .one .Persright .content {
+  float: left;
+  width: 247px;
+  height: 177px;
+}
+.team .pulick .Personnel .war .one .Persright .content p {
+  margin: 0px;
+}
+.team .pulick .Personnel .war .one .Persright .content .wx {
+  min-height: 100px;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.team .pulick .Personnel .war .one .Persright .content .eml {
+  height: 45px;
+  width: 245px;
+  border: 1px solid #f1f2f6;
+}
+.team .pulick .Personnel .war .one .Persright .content .eml .q {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  float: left;
+  background: #d9d9e1;
+}
+.team .pulick .Personnel .war .one .Persright .content .eml .q img {
+  margin-top: 17px;
+  margin-left: 11px;
+}
+.team .pulick .Personnel .war .one .Persright .content .eml .e {
+  float: left;
+  width: 200px;
+  color: #5f4c82;
+  background: #e7e8ec;
+  line-height: 45px;
+  text-align: center;
+}
+.team .pulick .Personnel .war .one .Persright .content .eml:hover {
+  border-color: #86759e;
+  cursor: pointer;
+  transition: border-color 0.8s;
+}
+.team .pulick .Personnel .war .one .Persright .Login {
+  float: left;
+  margin-left: 36px;
+  width: 47px;
+  height: 200px;
+  background: #2999d6;
+}
+.team .pulick .Personnel .war .one .Persright .Login div {
+  overflow: hidden;
+  height: 25%;
+  width: 100%;
+}
+.team .pulick .Personnel .war .one .Persright .Login div img {
+  margin-left: 12px;
+}
+.team .pulick .Personnel .war .one .Persright .Login div:hover {
+  background: #168bcb;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.team .pulick .Personnel .war .one .Persright .Login div .a {
+  margin-top: -30px;
+}
+.team .pulick .Personnel .war .one .Persright .Login div .b {
+  margin-top: -75px;
+}
+.team .pulick .Personnel .war .one .Persright .Login div .c {
+  margin-top: -120px;
+}
+.team .pulick .Personnel .war .one .Persright .Login div .d {
+  margin-top: -165px;
+}
+.cooper .pulick .coo-img {
+  width: 100%;
+  padding-bottom: 80px;
+}
+.cooper .pulick .businessTop {
+  text-align: center;
+}
+.cooper .pulick .businessTop h1,
+.cooper .pulick .businessTop p {
+  margin: 0px;
+  font-size: 15px;
+}
+.cooper .pulick .businessTop h1 {
+  font-size: 60px;
+  font-family: '宋体';
+  color: #311759;
+}
+.cooper .pulick .businessTop p {
+  letter-spacing: 6px;
+  color: #311759;
+}
+.cooper .pulick .cooper {
+  padding: 100px 0px;
+}
+.cooper .pulick .cooper .mech {
+  float: right;
+  width: 480px;
+  height: 371px;
+}
+.cooper .pulick .cooper .mech .mech-head h2,
+.cooper .pulick .cooper .mech .mech-head p {
+  margin: 0px;
+}
+.cooper .pulick .cooper .mech .mech-head h2 {
+  font-size: 36px;
+  line-height: 50px;
+  color: #5f4c82;
+  font-family: "华文楷体";
+}
+.cooper .pulick .cooper .mech .mech-head p {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  padding-left: 6px;
+  letter-spacing: 6px;
+  color: #5f4c82;
+}
+.cooper .pulick .cooper .mech .mech-head span {
+  display: block;
+  float: right;
+  width: 69px;
+  height: 26px;
+  background: url(../images/yonghu_morebg.png) no-repeat -69px 0;
+}
+.cooper .pulick .cooper .mech .mech-head span:hover {
+  background: url(../images/yonghu_morebg.png) no-repeat 0 0;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.cooper .pulick .cooper .mech ul {
+  list-style: none;
+  padding: 0px;
+}
+.cooper .pulick .cooper .mech ul li {
+  width: 89px;
+  float: left;
+  height: 78px;
+  width: 160px;
+  margin-top: 60px;
+}
+.cooper .pulick .cooper .user {
+  float: left;
+  width: 548px;
+  height: 371px;
+  margin-right: 70px;
+  border-right: 1px solid #d3d3d3;
+}
+.cooper .pulick .cooper .user .user-head h2,
+.cooper .pulick .cooper .user .user-head p {
+  margin: 0px;
+}
+.cooper .pulick .cooper .user .user-head h2 {
+  font-size: 36px;
+  line-height: 50px;
+  color: #5f4c82;
+  font-family: "华文楷体";
+}
+.cooper .pulick .cooper .user .user-head p {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  padding-left: 6px;
+  letter-spacing: 6px;
+  color: #5f4c82;
+}
+.cooper .pulick .cooper .user ul {
+  list-style: none;
+  padding: 0px;
+}
+.cooper .pulick .cooper .user ul li {
+  width: 89px;
+  float: left;
+  height: 78px;
+  width: 159px;
+  margin-top: 60px;
+}
+.cooper .cooper-img img {
+  width: 100%;
+  display: block;
+}
+.contact {
+  background: #f1f2f6;
+  padding-bottom: 50px;
+}
+.contact .pulick .businessTop {
+  text-align: center;
+  padding-top: 30px;
+}
+.contact .pulick .businessTop h1,
+.contact .pulick .businessTop p {
+  margin: 0px;
+  font-size: 15px;
+}
+.contact .pulick .businessTop h1 {
+  font-size: 60px;
+  font-family: '宋体';
+  color: #311759;
+}
+.contact .pulick .businessTop p {
+  letter-spacing: 6px;
+  color: #311759;
+}
+.contact .pulick .mode {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+.contact .pulick .mode div {
+  width: 343px;
+  height: 47px;
+  float: left;
+}
+.contact .pulick .mode .clear {
+  width: 0;
+  height: 0;
+  float: none;
+}
+.contact .pulick .mode .name,
+.contact .pulick .mode .Email,
+.contact .pulick .mode .Telephone {
+  border: 1px solid #dedfe3;
+}
+.contact .pulick .mode .name:hover,
+.contact .pulick .mode .Email:hover,
+.contact .pulick .mode .Telephone:hover {
+  border-color: #b5b5b5;
+  transition: border-color 0.3s;
+}
+.contact .pulick .mode .name span,
+.contact .pulick .mode .Email span,
+.contact .pulick .mode .Telephone span {
+  width: 45px;
+  height: 47px;
+  display: block;
+  float: left;
+  background: #e7e8ec;
+}
+.contact .pulick .mode .name span img,
+.contact .pulick .mode .Email span img,
+.contact .pulick .mode .Telephone span img {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.contact .pulick .mode .name input,
+.contact .pulick .mode .Email input,
+.contact .pulick .mode .Telephone input {
+  border: none;
+  height: 47px;
+  width: 278px;
+  border-left: none;
+  float: left;
+  padding: 0px;
+  padding-left: 20px;
+  line-height: 45px;
+  outline: none;
+}
+.contact .pulick .mode .Email {
+  margin: 0px 31px;
+}
+.contact .pulick .Leaving .word {
+  float: left;
+  width: 720px;
+  border: 1px solid #dedfe3;
+}
+.contact .pulick .Leaving .word:hover {
+  border-color: #b5b5b5;
+  transition: border-color 0.3s;
+}
+.contact .pulick .Leaving .word span {
+  width: 45px;
+  height: 213px;
+  display: block;
+  float: left;
+  background: #e7e8ec;
+}
+.contact .pulick .Leaving .word span img {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.contact .pulick .Leaving .word .text {
+  height: 211px;
+  width: 654px;
+  border: 1px solid #dedfe3;
+  border-left: none;
+  float: left;
+  padding: 0px;
+  padding-left: 20px;
+  line-height: 45px;
+  outline: none;
+  resize: none;
+}
+.contact .pulick .Leaving .mail {
+  float: left;
+  width: 347px;
+  height: 213px;
+  margin-left: 30px;
+}
+.contact .pulick .Leaving .mail p {
+  margin: 0px;
+  font-family: '宋体';
+}
+.contact .pulick .Leaving .mail p span {
+  color: red;
+}
+.contact .pulick .Leaving .mail p.p1 {
+  color: #9b9a9f;
+  font-size: 18px;
+  padding-bottom: 40px;
+}
+.contact .pulick .Leaving .mail p.p2 {
+  color: #605f64;
+  padding-bottom: 68px;
+}
+.contact .pulick .Leaving .mail .Send {
+  width: 345px;
+  height: 47px;
+}
+.contact .pulick .Leaving .mail .Send span {
+  display: block;
+  height: 47px;
+  width: 47px;
+  float: left;
+  background: #2999d6;
+}
+.contact .pulick .Leaving .mail .Send span img {
+  margin: 16px 17px;
+}
+.contact .pulick .Leaving .mail .Send input[type=button] {
+  border: none;
+  height: 49px;
+  width: 280px;
+  border: 1px solid #dedfe3;
+  border-left: none;
+  float: left;
+  padding: 0px;
+  line-height: 45px;
+  outline: none;
+  background: #168bcb;
+  margin-top: -1px;
+  color: white;
+}
+.contact .pulick .Leaving .mail .Send input[type=button]:hover {
+  background: #0d74ac;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact .pulick .Choice {
+  width: 100%;
+  height: 148px;
+  padding-top: 90px;
+}
+.contact .pulick .Choice .address,
+.contact .pulick .Choice .word,
+.contact .pulick .Choice .network {
+  width: 33.333333%;
+  height: 148px;
+  float: left;
+}
+.contact .pulick .Choice .address span,
+.contact .pulick .Choice .word span,
+.contact .pulick .Choice .network span {
+  float: left;
+}
+.contact .pulick .Choice .address div,
+.contact .pulick .Choice .word div,
+.contact .pulick .Choice .network div {
+  float: left;
+  width: 240px;
+  margin-left: 22px;
+  font-family: '宋体';
+}
+.contact .pulick .Choice .address div h3,
+.contact .pulick .Choice .word div h3,
+.contact .pulick .Choice .network div h3 {
+  margin: 0px;
+  font-size: 24px;
+  color: #5f4c82;
+}
+.contact .pulick .Choice .address div p,
+.contact .pulick .Choice .word div p,
+.contact .pulick .Choice .network div p {
+  color: #524d5c;
+  line-height: 24px;
+}
+.contact .pulick .Choice .word .addresss p {
+  line-height: 70px;
+}
+.API {
+  width: 100%;
+  position: relative;
+}
+.API img {
+  width: 100%;
+  position: absolute;
+  z-index: 55;
+}
+.API img.imgb {
+  bottom: 0px;
+  left: 0px;
+}
+.API #allmap {
+  height: 660px;
+  width: 100%;
+}
+@keyframes name {
+  30% {
+    transform: scaleY(1.1) scaleX(0.8);
+  }
+  80% {
+    transform: scaleX(1.15) scaleY(0.8);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+@keyframes yong {
+  0% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  25% {
+    transform: rotate(12deg) scale(1.1);
+  }
+  30% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  40% {
+    transform: rotate(8deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(-6deg) scale(1.1);
+  }
+  60% {
+    transform: rotate(4deg) scale(1.1);
+  }
+  70% {
+    transform: rotate(0deg) scale(1.1);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

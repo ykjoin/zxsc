@@ -90,3 +90,66 @@ a:link {
     transform: scaleY(1);
   }
 }
+.footer {
+  background: url(../images/yinyue_bg.jpg);
+  height: 348px;
+}
+.footer .pulick .music {
+  padding: 116px 0 0 276px;
+}
+.footer .pulick .music span {
+  display: block;
+  width: 57px;
+  height: 57px;
+  float: left;
+  margin-right: 26px;
+}
+.footer .pulick .music span.duo {
+  background: url(../images/yinyue_duo.png) no-repeat;
+}
+.footer .pulick .music span.lai {
+  background: url(../images/yinyue_lai.png) no-repeat;
+}
+.footer .pulick .music span.mi {
+  background: url(../images/yinyue_mi.png) no-repeat;
+}
+.footer .pulick .music span.fa {
+  background: url(../images/yinyue_fa.png) no-repeat;
+}
+.footer .pulick .music span.suo {
+  background: url(../images/yinyue_suo.png) no-repeat;
+}
+.footer .pulick .music span.la {
+  background: url(../images/yinyue_la.png) no-repeat;
+}
+.footer .pulick .music span.xi {
+  background: url(../images/yinyue_xi.png) no-repeat;
+}
+.footer .pulick .music span:hover {
+  background-position: 0 -57px;
+  animation: name 0.3s;
+  cursor: pointer;
+}
+.footer .pulick .shenmin {
+  border-top: 2px #9890a2 dashed;
+  text-align: center;
+  line-height: 65px;
+  margin-top: 79px;
+  color: #fff;
+  cursor: pointer;
+  font-family: '宋体';
+}
+.footer .pulick .shenmin:hover {
+  color: #6CF;
+}
+@keyframes name {
+  30% {
+    transform: scaleY(1.1) scaleX(0.8);
+  }
+  80% {
+    transform: scaleX(1.15) scaleY(0.8);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
