@@ -1,0 +1,122 @@
+@import "header";
+@import "norama";
+@import "footer";
+.dynamic{
+    background:#f1f2f6;
+    .flo{
+        width: 100%;
+        display: block;
+    }
+    .pulick{
+        .head{
+            h1,.p{
+                text-align: center;
+                font-size: 54px;
+                color: #311859;
+                margin: 0px;
+                padding-top:100px;
+                font-family: '楷体';
+            }
+            .p{
+               font-size: 18px;
+               margin: 0px;
+               padding-top: 0px;
+               color: #311859;
+            }
+            .chek{
+                width: 37px;
+                margin: 0 auto;
+            }
+        }
+        .div{
+            color: #311759;
+            background: url(../images/pen_line.png)no-repeat left bottom;
+            background-size:96% 6%;
+            height: 60px;
+            width: 100%;
+            .pen{
+                float:right;
+                margin-top:7px;
+            }
+            h1{
+                font-family: '宋体';
+                font-size: 30px;
+                color: #311859;
+            }
+        }
+        .onter{
+            ul{
+                width: 100%;
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+                padding-top: 50px;
+                li{
+                    width: 508px;
+                    height: 202px;
+                    float: left;
+                    background: #fff;
+                    padding: 36px 0 0 20px;
+                    margin: 0 20px 30px 0;
+                    border: 1px solid #fff;
+                    cursor: pointer;
+                    position: relative;
+                    &:hover{
+                        border-color: #86759e;
+                        transform: translateY(-6px);
+                        transition: transform 0.3s;
+                    }
+                    .cont-right{
+                        float: right;
+                        width: 221px;
+                        h3,p{
+                            margin: 0px;
+                            color: #5c5c5e;
+                            font-family: '宋体';
+                        }
+                        h3{
+                            padding-top: 20px;
+                            font-size: 20px;
+                        }
+                        span{
+                            color: #6b6a6f;
+                            font-size: 14px;
+                            padding-top: 2px;
+                        }
+                        p{
+                            padding-top: 20px;
+                            font-size: 14px;
+                            line-height: 24px;
+                        }
+                    }
+                    .img-left{
+                        float: left;
+                        width: 260px;
+                        height: 168px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        .bottom{
+            .bottom-img{
+                width: 107px;
+                height: 175px;
+                margin: 0px auto;
+               padding-top: 30px;
+            }
+            .qe{
+                height: 58px;
+                width: 58px;
+                background: url(../images/lis_more_btn_bg.png) no-repeat 0 -58px;
+                margin: 0px auto;
+                margin-top: 15px;
+                cursor: pointer;
+                &:hover{
+                    background-position-y: 0px;
+                    transition: background-position-y 0.5s;
+                }
+            }
+        }
+    }
+}

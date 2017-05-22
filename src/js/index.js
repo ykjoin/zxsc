@@ -72,7 +72,6 @@ $(function(){
 		$('.banner .banner-img').attr('src',img[index])
 		$('.banner .button .cir img').attr('src',img1[1]);
 		$('.banner .button .cir img').eq(index).attr('src',img1[0]);
-		
 	}
 	$('.banner .button .cir img').on('click',function(){
 		index =$(this).index();
@@ -169,16 +168,16 @@ $(function(){
 		}
 	});
 	$('.top').on('click',function(){
-//		$(this).animate({"bottom":1000,"opacity":0},400,function(){
-//			$(this).css("opacity",1).fadeOut(0).css("bottom",200);
-//		});
+		$(this).animate({"bottom":1000,"opacity":0},400,function(){
+			$(this).css("opacity",1).fadeOut(0).css("bottom",200);
+		});
 		
 		$('body,html').animate({
 			scrollTop: 0
 		}, 400);
 	})
 	
-	})
+})
 //按钮动画
 $('.img-right').hover(function(){
 		$(this).css('animation','name 0.3s')
@@ -274,16 +273,31 @@ $(function(){
 				backgroundPositionY:'0px',
 				transition:'backgroundPositionY 1s'
 			},function(){
-				$(this).parents('.Nonoe').find('.contents').stop().slideToggle();
+					var disp = $(this).parents('.Nonoe').find('.contents').css('display');
+					if(disp =='none'){
+						$(this).animate({
+							backgroundPositionY:'-67px',
+							transition:'backgroundPositionY 1s'
+						},function(){
+							$(this).parents('.Nonoe').find('.contents').stop().slideToggle();
+						})
+					}else{
+						$(this).animate({
+							backgroundPositionY:'0px',
+							transition:'backgroundPositionY 1s'
+						},function(){
+							$(this).parents('.Nonoe').find('.contents').stop().slideToggle();
+						})
+					}
 			})
-			
 		}else{
 			$(this).animate({
 				backgroundPositionY:'-67px',
 				transition:'backgroundPositionY 1s'
 			},function(){
 				$(this).parents('.Nonoe').siblings().find('.contents').slideUp()
-			$(this).parents('.Nonoe').find('.contents').slideDown()
+				$(this).parents('.Nonoe').find('.contents').slideDown()
+				$(this).parents('.Nonoe').siblings().find('.falss').css('backgroundPositionY','0px')
 			})
 			
 			
@@ -292,14 +306,200 @@ $(function(){
 	$('.NonoeImg').find('img').on('click',function(){
 		var a = index;
 		index = $(this).parents('.Nonoe').index()
+		var disp = $(this).parents('.Nonoe').find('.contents').css('display');
 		if(a==index){
 			$(this).parents('.Nonoe').find('.contents').stop().slideToggle();
+			
+			if(disp =='none'){
+						$(this).parents('.Nonoe').find('.falss').css('backgroundPositionY','-67px')
+					}else{
+						$(this).parents('.Nonoe').find('.falss').css('backgroundPositionY','0px')
+					}
 		}else{
+			$(this).parents('.Nonoe').find('.falss').css('backgroundPositionY','-67px')
 			$(this).parents('.Nonoe').siblings().find('.contents').slideUp()
 			$(this).parents('.Nonoe').find('.contents').slideDown()
+			$(this).parents('.Nonoe').siblings().find('.falss').css('backgroundPositionY','0px')
 		}
 	})
 	
 })
+//团队成员介绍
+$(function(){
+	var img1=['dist/images/nextprevnow.png','dist/images/nextprevothers.png'];
+	var index=0;
+	$('.Personnel .btn .next').on('click',function(){
+		index++;
+		if(index==3){
+			index=0;
+		}
+		per();
+		yy();
+	})
+	$('.Personnel .btn .prev').on('click',function(){
+		index--;
+		if(index<0){
+			index=2;
+		}
+		per();
+		kk();
+	})
+	function per(){
+		$('.cirr img').eq(index).attr('src','dist/images/nextprevnow.png')
+		$('.cirr img').eq(index).siblings().attr('src','dist/images/nextprevothers.png')
+		
+	}
+	function yy(){
+		var a = $(".war div").eq(0);
+		$('.war').animate({
+			left:50
+		},600,function(){
+			$('.war').animate({
+			left:-1100
+			},400,function(){
+				$(".war").append(a);
+				$('.war').css('left',0)
+			})
+		})
+	}
+	function kk(){
+		var a = $(".war>div").eq(2);
+		$(".war").prepend(a);
+		$('.war').animate({
+			left:1100
+		},200,function(){
+			$('.war').animate({
+				left:0
+			},600)
+		})
+	}
+})
 
-
+//百度地图
+$(function(){
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(106.523035,29.545208);
+	map.centerAndZoom(point, 15);
+	var marker = new BMap.Marker(point);
+	map.addOverlay(marker);             
+	marker.setAnimation(BMAP_ANIMATION_BOUNCE); 
+})
+//公司简介
+$(function(){
+	var index=0;
+	var leftt=60;
+	$('.line li').on('click',function(){
+		var a=index;
+		index=$(this).index();
+			if(a>index){
+				if(index==0){
+					leftt=leftt-180*(a+index);
+				}else{
+					leftt=leftt-180*(a-index);
+				}
+				kk();
+				yk();
+				dispp()
+			}else if(a<index){
+				leftt=leftt+180*(index-a)
+				yy()
+				yk()
+				disps()
+			}
+	})
+	$('.pieces div').on('click',function(){
+		var a=index;
+		index=$(this).index();
+			if(a>index){
+				if(index==0){
+					leftt=leftt-180*(a+index);
+				}else{
+					leftt=leftt-180*(a-index);
+				}
+				kk();
+				yk();
+				dispp()
+			}else if(a<index){
+				leftt=leftt+180*(index-a)
+				yy()
+				yk()
+				disps()
+			}
+	})
+	
+	$('.about-img .img-right').on('click',function(){
+		index++;
+		if(index==6)
+		{
+			index=0;
+			leftt=0;
+		}
+		if(leftt>=60){
+			leftt=leftt+180
+		}
+		else{
+			leftt=60;
+		}
+		yy()
+		yk()
+		disps()
+	})
+	$('.about-img .img-left').on('click',function(){
+		index--;
+		if(index<0)
+		{
+			index=5;
+		}
+		if(leftt==60){
+			leftt=960
+		}
+		else{
+			leftt=leftt-180;
+		}
+		kk();
+		yk();
+		dispp()
+	})
+	function yk(){
+		$('.center ul').eq(0).find('li').eq(index).addClass('size-topa');
+		$('.center ul').eq(0).find('li').eq(index).siblings().removeClass('size-topa');
+		$('.center ul').eq(1).find('li').eq(index).addClass('linea');
+		$('.center ul').eq(1).find('li').eq(index).siblings().removeClass('linea');
+		$('.center ul').eq(2).find('li').eq(index).addClass('size-boma');
+		$('.center ul').eq(2).find('li').eq(index).siblings().removeClass('size-boma');
+		$('.about-bottom .pieces div').eq(index).find('span').eq(0).show();
+		$('.about-bottom .pieces div').eq(index).find('span').eq(1).hide();
+		$('.about-bottom .pieces div').eq(index).siblings().find('.span1').hide();
+		$('.about-bottom .pieces div').eq(index).siblings().find('.span2').show();
+	}
+	function yy(){
+		$('.center').find('.move .cript').animate({
+			left:leftt
+		})
+	}
+	function kk(){
+		$('.center').find('.move .cript').animate({
+			left:leftt
+		})
+	}
+	function dispp(){
+		$('.hre').find('.one').hide();
+		$('.hre').find('.one').eq(index).show();
+		$('.hre').find('.one').eq(index).find('.div-left').css('left',500);
+		$('.hre').find('.one').eq(index).find('.div-left').animate({left:0},500);
+		$('.hre').find('.one').eq(index).find('.div-right').css('right',-800);
+		$('.hre').find('.one').eq(index).find('.div-right').animate({right:0},600);
+	}
+	function disps(){
+		$('.hre').find('.one').hide();
+		$('.hre').find('.one').eq(index).show();
+		$('.hre').find('.one').eq(index).find('.div-left').css('left',-500);
+		$('.hre').find('.one').eq(index).find('.div-left').animate({left:0},500);
+		$('.hre').find('.one').eq(index).find('.div-right').css('right',800);
+		$('.hre').find('.one').eq(index).find('.div-right').animate({right:0},600);
+	}
+	$('.about-bottom .hre div').eq(0).show();
+	$('.about-bottom .hre div').eq(0).siblings().hide();
+	$('.about-bottom .pieces div').eq(0).find('span').eq(0).show();
+	$('.about-bottom .pieces div').eq(0).find('span').eq(1).hide()
+})
