@@ -336,6 +336,27 @@ $(function(){
 		per();
 		yy();
 	})
+	var sj = setInterval(function(){
+		index++;
+		if(index==3){
+			index=0;
+		}
+		per();
+		yy();
+	},3000)
+	$('.Personnel').on('mouseover',function(){
+		clearInterval(sj)
+	})
+	$('.Personnel').on('mouseleave',function(){
+		sj = setInterval(function(){
+		index++;
+		if(index==3){
+			index=0;
+		}
+		per();
+		yy();
+	},3000)
+	})
 	$('.Personnel .btn .prev').on('click',function(){
 		index--;
 		if(index<0){
@@ -365,12 +386,12 @@ $(function(){
 	function kk(){
 		var a = $(".war>div").eq(2);
 		$(".war").prepend(a);
-		$('.war').animate({
-			left:1100
-		},200,function(){
+		$('.war').css('left',-2200).animate({
+			left:50
+		},600,function(){
 			$('.war').animate({
 				left:0
-			},600)
+			},400)
 		})
 	}
 })
