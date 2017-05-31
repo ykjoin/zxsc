@@ -404,6 +404,16 @@ $(function(){
 	var marker = new BMap.Marker(point);
 	map.addOverlay(marker);             
 	marker.setAnimation(BMAP_ANIMATION_BOUNCE); 
+	
+	
+var pt = new BMap.Point(106.523973, 29.544977);
+			var myIcon = new BMap.Icon("http://developer.baidu.com/map/jsdemo/img/fox.gif", new BMap.Size(300, 157));
+			var marker2 = new BMap.Marker(pt, { icon: myIcon }); // 创建标注
+			map.addOverlay(marker2); // 将标注添加到地图
+var pt = new BMap.Point(106.523973, 29.544977);
+			var myIcon = new BMap.Icon("http://developer.baidu.com/map/jsdemo/img/fox.gif", new BMap.Size(300, 157));
+			var marker2 = new BMap.Marker(pt, { icon: myIcon }); // 创建标注
+			map.addOverlay(marker2); // 将标注添加到地图中 
 })
 //公司简介
 $(function(){
