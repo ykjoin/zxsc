@@ -503,3 +503,10 @@ $(function(){
 	$('.about-bottom .pieces div').eq(0).find('span').eq(0).show();
 	$('.about-bottom .pieces div').eq(0).find('span').eq(1).hide()
 })
+//音乐
+$(function(){
+	$('.music span').on('click',function(){
+		var index = $(this).index();
+			$('audio')[index].play();
+	})
+})
